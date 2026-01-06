@@ -14,5 +14,4 @@
 13. Verify the last date of the month
 14. Verify selection of february 28 during non leap years
 15. Verify selection of february 29 during leap years
-16. Verify valid entry of inputs in input fields
-17. Verify invalid entry of inputs in input fields
+16. Verify invalid entry of inputs in input fields

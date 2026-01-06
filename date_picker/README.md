@@ -18,6 +18,3 @@
 16. Verify selection of february 29 during leap years
 17. Verify valid entry of inputs in input fields
 18. Verify invalid entry of inputs in input fields
-19. Verify date selection using enter
-20. verify date selction using arrow keys
-21. Verify date selection using page up and page down

@@ -6,8 +6,8 @@
 4. Verify the date picker closes when esc key is pressed
 5. Verify the selected date appears on the input field correctly after selecting the date
 6. Verify the current date is getting highlighted
-8. Verify next year navigation
-9. Verify previous year navigation
+8. Verify next month navigation
+9. Verify previous month navigation
 10. Verify selecting valid date
 11. Verify date selection for different months and different years
 12. Verify the first day of the month

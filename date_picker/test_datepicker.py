@@ -1,11 +1,8 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from datetime import datetime
 import calendar
-import time
 import pytest
 
 @pytest.fixture
@@ -31,10 +28,6 @@ def open_date_picker(driver, wait):
 
 def today_date():
     return datetime.now().date()
-
-def test_today_date_function():
-    today = today_date()
-    assert today == datetime.now().date()
 
 def test_input_title_verification(driver_and_wait):
     driver, _ = driver_and_wait   # we don’t need wait here
@@ -68,37 +61,6 @@ def test_highlighted_date_is_today(driver_and_wait):
     selected_date = datetime.strptime(value, "%m/%d/%Y").date()
 
     assert selected_date == today_date()
-
-def test_next_month_navigation(driver_and_wait):
-    driver, wait = driver_and_wait
-
-    open_date_picker(driver, wait)
-
-    # Click next month arrow
-    next_arrow = wait.until(
-        EC.element_to_be_clickable(
-            (By.CSS_SELECTOR, ".ui-icon.ui-icon-circle-triangle-e")
-        )
-    )
-    next_arrow.click()
-
-    # Select date "3"
-    date_3 = wait.until(
-        EC.element_to_be_clickable(
-            (By.XPATH, "//a[normalize-space()='3']")
-        )
-    )
-    date_3.click()
-
-    # Read selected date
-    value = driver.find_element(By.ID, "datepicker").get_attribute("value")
-    selected_date = datetime.strptime(value, "%m/%d/%Y").date()
-
-    today = today_date()
-
-    # Assertion (handles Dec → Jan automatically)
-    expected_month = (today.month % 12) + 1
-    assert selected_date.month == expected_month
 
 def test_nxt_month_navigation(driver_and_wait):
     driver, wait = driver_and_wait
@@ -250,6 +212,9 @@ def test_february_days(driver_and_wait, year, day):
             assert 29 not in available_days
     else:
         assert day in available_days
+
+# jQuery UI datepicker does not display validation errors for invalid inputs.
+# The expected behavior is that invalid dates are not selectable in the calendar.
 
 invalid_values = [
     "02/30/2009",  # invalid day in Feb

@@ -1,5 +1,7 @@
 ## Automation testing for a date picker
 
+📌 Test Target: This project uses the public jQuery UI Datepicker demo site, which is intended for learning and demonstration purposes.
+
 ### Overview:
 This project is a Component-level UI test automation with emphasis on test design, edge cases, and maintainability built to validate the behavior of the jQuery UI Datepicker using Python, Selenium WebDriver, and PyTest.
 

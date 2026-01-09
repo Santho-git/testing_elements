@@ -13,12 +13,13 @@ The goal of this project is a componnt level UI test automation on emphasis of t
 
 ### Structure of accordion
 1. The accordion taken for example is, Expanded by deafult accordion
-2. This accordion has two sections in it
-3. At first, the accordion will have one section expanded
-4. When clicked on the header, the section will expand
-5. It is an example for multi opening accordion
-6. When clicked on the header, the accordion will expand or collapse
-7. There is an icon in the side, which when clicked will change direction (v-^)
+2. It is a dynamic one
+3. This accordion has two sections in it
+4. At first, the accordion will have one section expanded
+5. When clicked on the header, the section will expand
+6. It is an example for multi opening accordion
+7. When clicked on the header, the accordion will expand or collapse
+8. There is an icon in the side, which when clicked will change direction (v-^)
 
 ### Manual test cases for accordion component
 1. Verify there are two sections present in the accordion

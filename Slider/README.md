@@ -15,5 +15,3 @@
 12. Verify tooltip does not go outside or it does not overlap with the other UI elements present on the screen
 13. Verify the tooltip does not move below the minimum range
 14. Verify the tooltip does not move above the maximum range
-15. Verify tooltip shows accurate values when moved slowly
-16. Verify tooltip shows accurate values when moved quickly

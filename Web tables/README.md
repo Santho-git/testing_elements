@@ -49,7 +49,7 @@ The test target for this project is a web table taken from Material UI website w
 * Automation Tool: Selenium WebDriver
 * Test Framework: PyTest
 * Browser: Google Chrome
-# Test Target: Web table
+* Test Target: Web table
 
 ### Design Highlights
 * Reusable PyTest fixture for browser setup and teardown
